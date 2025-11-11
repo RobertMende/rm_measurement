@@ -2,4 +2,4 @@ from enum import Enum;
 
 
 class MeasurementType(Enum):
-    XRD = 0
+    XRD = "xrd"

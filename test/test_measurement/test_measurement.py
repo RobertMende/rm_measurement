@@ -16,5 +16,5 @@ class TestMeasurement(TestCase):
 
     def testEnforcesEqualSequenceLength(self):
         with self.assertRaises(UnequalSequenceLengthError):
-            Measurement(uuid4(), MeasurementType.XRD, "angle", "counts", "°", "1", [1,2,3], [4,5]);
+            Measurement(MeasurementType.XRD, "angle", "counts", "°", "1", [1,2,3], [4,5]);
 
