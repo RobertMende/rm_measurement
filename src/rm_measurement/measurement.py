@@ -3,7 +3,7 @@ from typing import Sequence;
 from uuid import UUID;
 
 from .measurement_types import MeasurementType;
-from .exceptions import UnequalSequenceLength;
+from .exceptions import UnequalSequenceLengthError;
 
 
 @dataclass(frozen=True)
@@ -22,5 +22,5 @@ class Measurement:
 
     def _check_equal_sequence_length(self):
         if len(self.x_values) != len(self.y_values):
-            raise UnequalSequenceLength("The x and y values must share the same length");
+            raise UnequalSequenceLengthError("The x and y values must share the same length");
 

@@ -4,7 +4,7 @@ from uuid import uuid4;
 
 from src.rm_measurement.measurement import Measurement;
 from src.rm_measurement.measurement_types import MeasurementType;
-from src.rm_measurement.exceptions import UnequalSequenceLength;
+from src.rm_measurement.exceptions import UnequalSequenceLengthError;
 
 class TestMeasurement(TestCase):
 
@@ -15,6 +15,6 @@ class TestMeasurement(TestCase):
         pass;
 
     def testEnforcesEqualSequenceLength(self):
-        with self.assertRaises(UnequalSequenceLength):
+        with self.assertRaises(UnequalSequenceLengthError):
             Measurement(uuid4(), MeasurementType.XRD, "angle", "counts", "°", "1", [1,2,3], [4,5]);
 
