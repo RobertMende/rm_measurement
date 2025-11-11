@@ -1,4 +1,4 @@
 
 
-class UnequalSequenceLength(Exception):
+class UnequalSequenceLengthError(Exception):
     pass;
