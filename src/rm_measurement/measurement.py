@@ -8,7 +8,6 @@ from .exceptions import UnequalSequenceLengthError;
 
 @dataclass(frozen=True)
 class Measurement:
-    id: UUID
     measurement_type: MeasurementType
     x_property: str
     y_property: str
